@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <!--                                                                          correct? the click handler function-->
-                <tr *ngFor="let post of blogPosts" [routerLink]="['admin/post', 'post._id']" (click)="rowClicked($event, post._id)">
+                <tr *ngFor="let post of blogPosts" [routerLink]="['admin/post', 'post._id']" (click)="rowClicked($event, post._id)" style="cursor: pointer;">
                     <td>{{post.title}}</td>
                     <td>{{post.postDate | date:'mediumDate'}}</td>
                     <td>{{post.category}}</td>
