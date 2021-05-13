@@ -18,18 +18,18 @@ export class NewPostComponent implements OnInit {
 
   formSubmit(form: NgForm): void{
 
-    
+
     this.blogPost.tags = this.tags.split(",").map(tag => tag.trim());
     this.blogPost.isPrivate = false;
     this.blogPost.postDate = new Date().toLocaleDateString();
-    this.blogPost.postedBy = "WEB422 Student";
+    this.blogPost.postedBy = "Ms. Blanco";
     this.blogPost.views = 0;
 
     this.data.newPost(this.blogPost).subscribe();
     this.router.navigate(['/admin']);
 
   }
-  
+
   ngOnInit(): void {
   }
 
