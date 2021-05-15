@@ -21,7 +21,7 @@ export class NewPostComponent implements OnInit {
 
     this.blogPost.tags = this.tags.split(",").map(tag => tag.trim());
     this.blogPost.isPrivate = false;
-    this.blogPost.postDate = new Date().toLocaleDateString();
+    this.blogPost.postDate = new Date().toString();
     this.blogPost.postedBy = "Ms. Blanco";
     this.blogPost.views = 0;
 
