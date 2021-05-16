@@ -103,41 +103,21 @@
   <section class="latest-posts">
     <div class="container">
       <header>
-        <h2>Latest from the blog</h2>
-        <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h2>Recommendation</h2>
+        <p class="text-big">Here are the most popular posts for you</p>
       </header>
       <div class="row">
-        <div class="post col-md-4">
-          <div class="post-thumbnail"><a routerLink="/post"><img src="/assets/img/blog-1.jpg" alt="..." class="img-fluid"></a></div>
+
+
+        <div class="post col-md-4" *ngFor="let post of posts">
+          <div class="post-thumbnail"><a routerLink="/post"><img [src]="post.featuredImage" alt="..." class="img-fluid"></a></div>
           <div class="post-details">
             <div class="post-meta d-flex justify-content-between">
-              <div class="date">20 May | 2016</div>
-              <div class="category"><a routerLink>Business</a></div>
+              <div class="date">{{(post.postDate.slice(6,10) | date:'mediumDate').slice(0,6)}} | {{post.postDate.slice(0,4)}}</div>
+              <div class="category"><a routerLink>{{post.category}}</a></div>
             </div><a routerLink="/post">
-              <h3 class="h4">Ways to remember your important ideas</h3></a>
-            <p class="text-muted">LLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-          </div>
-        </div>
-        <div class="post col-md-4">
-          <div class="post-thumbnail"><a routerLink="/post"><img src="/assets/img/blog-2.jpg" alt="..." class="img-fluid"></a></div>
-          <div class="post-details">
-            <div class="post-meta d-flex justify-content-between">
-              <div class="date">20 May | 2016</div>
-              <div class="category"><a routerLink>Technology</a></div>
-            </div><a routerLink="/post">
-              <h3 class="h4">Diversity in Engineering: Effect on Questions</h3></a>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-          </div>
-        </div>
-        <div class="post col-md-4">
-          <div class="post-thumbnail"><a routerLink="/post"><img src="/assets/img/blog-3.jpg" alt="..." class="img-fluid"></a></div>
-          <div class="post-details">
-            <div class="post-meta d-flex justify-content-between">
-              <div class="date">20 May | 2016</div>
-              <div class="category"><a routerLink>Financial</a></div>
-            </div><a routerLink="/post">
-              <h3 class="h4">Alberto Savoia Can Teach You About Interior</h3></a>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <h3 class="h4">{{post.title}}</h3></a>
+            <!-- <p class="text-muted">{{post.post}}</p> -->
           </div>
         </div>
       </div>
