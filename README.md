@@ -1,27 +1,27 @@
-# Assign6
+# Blanco Blog
+
+This project is a CRUD application built by AngularJS. Users are able to create new blog posts, read blog posts, modify existing blog posts, or delete them.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
-## Development server
+## Environment
+
+### What do you need to run the application?
+
+1. Text/code editor
+2. [npm](https://www.npmjs.com/get-npm)
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Run the project locally
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. `git clone https://github.com/yuanLeeMidori/blanco.git`
+2. `cd` to the project directory (`/blanco`)
+3. run `npm i` to install dependencies
+4. run `ng serve` to start the application
+5. Open your browser, navigate to `http://localhost:4200`, you should be able to see the web page loaded
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Contribute
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Coming soon!
