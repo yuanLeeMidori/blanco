@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import blogData from '../blogData.json';
-import { BlogPost } from '../BlogPost';
 
 @Component({
   selector: 'app-post',
@@ -9,8 +7,6 @@ import { BlogPost } from '../BlogPost';
 })
 export class PostComponent implements OnInit {
 
-  blogPosts: Array<BlogPost> = blogData;
-  
   constructor() { }
 
   ngOnInit(): void {
