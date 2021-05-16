@@ -10,30 +10,30 @@ export class PostService {
 
   perPage: number = 6;
 
-  API: string = "https://assign5-blog-posts.herokuapp.com";
+  API: string = "https://blanco-server.herokuapp.com";
 
   constructor(private http: HttpClient) { }
 
   getPosts(page, tag, category): Observable<BlogPost[]>{
 
     if((tag == null || tag == undefined) && (category == null || category == undefined))
-      return this.http.get<BlogPost[]>(`https://assign5-blog-posts.herokuapp.com/api/posts?page=${page}&perPage=${this.perPage}`);
+      return this.http.get<BlogPost[]>(`${this.API}/api/posts?page=${page}&perPage=${this.perPage}`);
     else if((tag != null || tag != undefined) && (category == null || category == undefined))
-      return this.http.get<BlogPost[]>(`https://assign5-blog-posts.herokuapp.com/api/posts?page=${page}&perPage=${this.perPage}&tag=${tag}`);
+      return this.http.get<BlogPost[]>(`${this.API}/api/posts?page=${page}&perPage=${this.perPage}&tag=${tag}`);
     else if((tag == null || tag == undefined) && (category != null || category != null))
-      return this.http.get<BlogPost[]>(`https://assign5-blog-posts.herokuapp.com/api/posts?page=${page}&perPage=${this.perPage}&category=${category}`);
+      return this.http.get<BlogPost[]>(`${this.API}/api/posts?page=${page}&perPage=${this.perPage}&category=${category}`);
     else if((tag != null || tag != undefined) && (category != null || category != undefined))
-      return this.http.get<BlogPost[]>(`https://assign5-blog-posts.herokuapp.com/api/posts?page=${page}&perPage=${this.perPage}&tag=${tag}&category=${category}`);
+      return this.http.get<BlogPost[]>(`${this.API}/api/posts?page=${page}&perPage=${this.perPage}&tag=${tag}&category=${category}`);
   }
 
   getPostById(id):Observable<BlogPost>{
 
-    return this.http.get<BlogPost>(`https://assign5-blog-posts.herokuapp.com/api/posts/${id}`);
+    return this.http.get<BlogPost>(`${this.API}/api/posts/${id}`);
 
   }
 
   getCategories():Observable<any>{
-    return this.http.get<any>(`https://assign5-blog-posts.herokuapp.com/api/categories`);
+    return this.http.get<any>(`${this.API}/api/categories`);
   }
 
   getTags():Observable<string[]>{
@@ -50,7 +50,7 @@ export class PostService {
   newPost(data: BlogPost):Observable<any>{
 
     return this.http.post<any>(`${this.API}/api/posts`, data);
-  
+
   }
 
   updatePostById(id:string, data:BlogPost):Observable<any>{
@@ -61,7 +61,7 @@ export class PostService {
   deletePostById(id:string):Observable<any>{
 
     return this.http.delete<any>(`${this.API}/api/posts/${id}`);
-    
+
   }
 
 }
