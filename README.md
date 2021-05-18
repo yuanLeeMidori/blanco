@@ -1,8 +1,8 @@
 # Blanco Blog
 
-This project is a CRUD application built by AngularJS. Users are able to create new blog posts, read blog posts, modify existing blog posts, or delete them.
+This project is a CRUD application built by AngularJS. Users are able to create new blog posts, read blog posts, modify existing blog posts, or delete them. You can also manage them by categories or tags.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Deployment: https://blanco-blog.netlify.app/home
 
 ## Environment
 
